@@ -39,11 +39,91 @@
 /* Global Design Tokens */
 :root {
     --font-body: "Lato", "Arial", sans-serif;
+    --dark-background: #000000;
+    --dark-color: #faf9f5;
+    --dark-button-background: #000000;
+    --dark-button-color: #faf9f5;
+    --background: #faf9f5;
+    --color-body: #000000;
+    --color-subtext: #4e4d52;
+    --color-accent: #111e69;
+    --padding-header: clamp(1.5rem, 5vw, 4rem);
+}
 
+/* Dark Mode Theme Switcher */
+.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-color);
+}
+#themeSwitchButton {
+    background-color: var(--dark-button-background);
+    color: var(--dark-button-color);
 }
 
 /* Global Styles (base) MOBILE FIRST */
 * {
     box-sizing: border-box;
     font-size-adjust: 0.507;
+    background-color: var(--background);
+    background-color: inherit;
+    display: grid;
+}
+
+header, body, footer {
+    width: 100%;
+    all: inherit;
+    padding: 1rem;
+}
+
+header {
+    margin: 0; 
+}
+
+header, h1, footer, nav ul li, nav ul, nav, footer p {
+    background-color: var(--color-accent);
+    color: var(--dark-color);
+}
+
+nav {
+    display: block;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: inherit;
+    color: inherit;
+}
+
+a:hover {
+    background-color: #BCB88A;
+    color:#111e69;
+}
+
+nav ul {
+    list-style: none;
+    max-width: 550px;
+}
+
+nav ul li {
+    justify-content: space-between;
+}
+
+button {
+    width: 12ch;
+    line-height: 1.5;
+}
+
+.card {
+    max-width: 400px;
+    box-shadow: 5px 10px 20px var(--color-accent);
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.card img {
+    max-width: 250px;
+    object-position: center;
+    width: 100%;
+    height: auto;
+    display: block;
 }
