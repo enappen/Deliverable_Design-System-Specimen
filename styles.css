@@ -37,5 +37,13 @@
 }
 
 /* Global Design Tokens */
+:root {
+    --font-body: "Lato", "Arial", sans-serif;
+
+}
 
 /* Global Styles (base) MOBILE FIRST */
+* {
+    box-sizing: border-box;
+    font-size-adjust: 0.507;
+}
