@@ -9,86 +9,92 @@
     </head>
     <body>
         <header>
-            <h1>The ultimate reference guide to Butte County</h1> 
-            <nav>
+            <h1 id="home">Welcome to Butte County</h1> 
+            <p class="tagline">The ultimate reference guide to Butte County</p>
+        </header>
+        <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Best Eats</a></li>
-                    <li><a href="#">Hot Spots</a></li>
-                    <li><a href="#">Stay Informed</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#best-eats">Best Eats</a></li>
+                    <li><a href="#stay-informed">Stay Informed</a></li>
+                    <li><a href="#subscribe">Subscribe</a></li>
                 </ul>
             </nav>
-            <button onClick="themeSwitch()" id="themeSwitchButton">Dark Mode</button>
-        </header>
-        
         <main>
-            <section>
+            <section class="card-section" id="best-eats">
                 <h2>Best Eats</h2>
-                <section class="card">
-                    <h3>The Sicilian Cafe</h3>
-                    <img src="assets/Images/SicilianCafe.png" alt="A fine dining table with wine glasses and napkins.">
-                    <p>
-                        The Sicilian Cafe is an upscale restaurant that serves 
-                        authentic Italian. The Arancini is a must-try item.
-                    </p>  
-                </section>
-                <section class="card">
-                    <h3>Big Tuna</h3>
-                    <img src="assets/Images/BigTuna.png" alt="One set of hand holding chopsticks above of table.">
-                    <p>
-                        Big Tuna offers affordable and delicious Japanese food. They have a 
-                        great selection of sushi and sashimi. 
-                    </p>  
-                </section>
-                <section class="card">
-                    <h3>Provisions</h3>
-                    <img src="assets/Images/Provisions.png" alt="A wooden table with cutlery.">
-                    <p>
-                        Provisions is a local pub-style restaurant with your favorite staples. 
-                        Their back patio dining area is a quiet and peaceful spot to enjoy your meal.
-                    </p>  
-                </section>
+                <div class="card-row">
+                    <section class="card">
+                        <h3>The Sicilian Cafe</h3>
+                        <img src="assets/Images/SicilianCafe.png" alt="A fine dining table with wine glasses and napkins.">
+                        <p>
+                            The Sicilian Cafe is an upscale restaurant that serves 
+                            authentic Italian. The Arancini is a must-try item.
+                        </p>  
+                    </section>
+                    <section class="card">
+                        <h3>Big Tuna</h3>
+                        <img src="assets/Images/BigTuna.png" alt="One set of hand holding chopsticks above of table.">
+                        <p>
+                            Big Tuna offers affordable and delicious Japanese food. They have a 
+                            great selection of sushi and sashimi. 
+                        </p>  
+                    </section>
+                    <section class="card">
+                        <h3>Provisions</h3>
+                        <img src="assets/Images/Provisions.png" alt="A wooden table with cutlery.">
+                        <p>
+                            Provisions is a local pub-style restaurant with your favorite staples. 
+                            Their back patio dining area is a quiet and peaceful spot to enjoy your meal.
+                        </p>  
+                    </section>
+                </div>
             </section>
-            <section>
-                <h2>Hot Spots</h2>
-                <section class="card">
-
-                </section>
-            </section>
-            <section>
+            <section class="card-section" id="stay-informed">
                 <h2>Stay Informed</h2>
-                <section class="card">
-                    <h3>Watch Duty</h3>
-                    <img src="assets/Images/Fire.jpg" alt="A photo of a wildfire with a dark grass foreground.">
-                    <p>
-                        Butte County is fairly prone to wildfires. Stay up-to-date on all 
-                        local fires and evacuation notices. Watch Duty has an app that 
-                        is downloadable by phone and can provide notifications when a fire 
-                        appears near you. Watch Duty is also accessible by <a href="https://app.watchduty.org/">their website</a>.
-                    </p>
-                </section>
-                <section class="card">
-                    <h3>Explore Butte County</h3>
-                    <img src="assets/Images/Butte County Trail.jpg" alt="A photo of a Butte County trail in a mountainous area with a bridge.">
-                    <p>
-                        Connect with the local community on the 
-                        <a href="https://www.explorebuttecounty.com/">Explore Butte County</a> website. 
-                        They regularly promote community events, local food spots, outdoor 
-                        activities, and more! 
-                    </p>
-                </section>
+                <div class="card-row">
+                    <section class="card alt-theme">
+                        <h3>Watch Duty</h3>
+                        <img src="assets/Images/Fire.jpg" alt="A photo of a wildfire with a dark grass foreground.">
+                        <p>
+                            Butte County is fairly prone to wildfires. Stay up-to-date on all 
+                            local fires and evacuation notices. Watch Duty has an app that 
+                            is downloadable by phone and can provide notifications when a fire 
+                            appears near you. Watch Duty is also accessible by <a href="https://app.watchduty.org/">their website</a>.
+                        </p>
+                    </section>
+                    <section class="card">
+                        <h3>Explore Butte County</h3>
+                        <img src="assets/Images/Butte County Trail.jpg" alt="A photo of a Butte County trail in a mountainous area with a bridge.">
+                        <p>
+                            Connect with the local community on the 
+                            <a href="https://www.explorebuttecounty.com/">Explore Butte County</a> website. 
+                            They regularly promote community events, local food spots, outdoor 
+                            activities, and more! 
+                        </p>
+                    </section>
+                </div>    
             </section>
-            <section>
+            <form id="subscribe" action="" method="get">
+                <h2>Subscribe</h2>
+                <p>Get informed on the most up-to-date resources for Butte County!</p>
+                <div class="form-item">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" placeholder="jdoe@email.com" required />
+                </div>
+                <fieldset class="form-item">
+                    <legend>Do you want alerts on sales to popular restaurants?</legend>
+                    <label><input type="radio" name="radio" value="yes">Yes</label>
+                    <label><input type="radio" name="radio" value="no">No</label>
+                </fieldset>
+                <div class="form-item">
+                    <label for="agree">Do you agree to the terms and conditions?</label>
+                    <input type="checkbox" name="agree" id="agree" checked/>
+                </div>
+                <button>Subscribe</button>
+            </form>
 
-            </section>
-            <section>
-
-            </section>
-            <section>
-
-            </section>
         </main>
-        <script src="scripts/main.js"></script>
         <footer>
             <p>Butte County Guide</p>
         </footer>

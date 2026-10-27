@@ -1,7 +1,7 @@
 /* CSS by Emily Nappen */
 
 /* Font Imports 
-    Lato is created by Lukasz Dziedzic and licensed under the Open Font License. 
+    Lato is designed by Lukasz Dziedzic and licensed under the Open Font License. 
     Licensing Information: https://openfontlicense.org/ 
 */
 @font-face {
@@ -39,91 +39,192 @@
 /* Global Design Tokens */
 :root {
     --font-body: "Lato", "Arial", sans-serif;
-    --dark-background: #000000;
-    --dark-color: #faf9f5;
-    --dark-button-background: #000000;
-    --dark-button-color: #faf9f5;
-    --background: #faf9f5;
-    --color-body: #000000;
+    --size-tagline: .875rem;
+    --size-body: clamp(0.5rem, 1rem, 2rem);
+    --size-h3: clamp(1rem, 1.25rem, 2.5rem);
+    --size-h2: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+    --size-h1: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+    --color-dark: #000000;
     --color-subtext: #4e4d52;
-    --color-accent: #111e69;
-    --padding-header: clamp(1.5rem, 5vw, 4rem);
+    --color-contrast: #111e69;
+    --color-accent: #faf9f5;
+    --color-nav: #6173ad;
+    --color-indicator: #BCB88A;
+    --action-weight: 700;
+    --padding: clamp(1rem, 4vw, 3rem);
+    --padding-card: 1.5rem;
+    --padding-cardrow: 0.25rem;
+    --padding-small: 0.75rem;
+    --margin-card: 1rem;
 }
 
 /* Dark Mode Theme Switcher */
 .dark-mode {
-    background-color: var(--dark-background);
-    color: var(--dark-color);
-}
-#themeSwitchButton {
-    background-color: var(--dark-button-background);
-    color: var(--dark-button-color);
+    background-color: var(--color-dark);
+    color: var(--color-accent);
 }
 
 /* Global Styles (base) MOBILE FIRST */
 * {
     box-sizing: border-box;
     font-size-adjust: 0.507;
-    background-color: var(--background);
-    background-color: inherit;
-    display: grid;
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+/* Visual Focus Indicator */
+a:focus-visible {
+    outline: 4px solid var(--color-indicator);
+    outline-offset: 4px;
+    box-shadow: 0 0 10px var(--color-indicator);
+}
+
+a {
+    padding: 0;
+    margin: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: var(--action-weight);
+}
+
+h1{
+    font-size: var(--size-h1);
+    padding: var(--padding);
+}
+h2 {
+    font-size: var(--size-h2);
+}
+h3 {
+    font-size: var(--size-h3);
+}
+
+p {
+    font-size: var(--size-body);
+}
+header p {
+    font-size: var(--size-tagline);
+    padding: var(--padding);
+}
+
+
+/* Hides title */
+title {
+    display: none;
+}
+
+/* Header, body, and footer */
+header, footer {
+    margin: 0; 
+    background-color: var(--color-contrast);
+    color: var(--color-accent);
 }
 
 header, body, footer {
-    width: 100%;
-    all: inherit;
-    padding: 1rem;
+    justify-content: space-between;
 }
 
-header {
-    margin: 0; 
+footer {
+    padding: var(--padding);
 }
 
-header, h1, footer, nav ul li, nav ul, nav, footer p {
-    background-color: var(--color-accent);
-    color: var(--dark-color);
-}
-
+/* Navigation */
 nav {
-    display: block;
+  background-color: var(--color-nav);  
 }
 
 nav a {
     text-decoration: none;
     background-color: inherit;
     color: inherit;
-}
-
-a:hover {
-    background-color: #BCB88A;
-    color:#111e69;
+    display: block;
 }
 
 nav ul {
     list-style: none;
-    max-width: 550px;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     justify-content: space-between;
+    text-align: center;
+    color: var(--color-accent);
+    padding: var(--padding-button);
 }
 
-button {
-    width: 12ch;
-    line-height: 1.5;
+/* Links and Visual Focus Indicators */
+a:hover {
+    background-color: var(--color-indicator);
+    color: var(--color-contrast);
 }
 
+/* Card Row */
+.card-section {
+    padding: var(--padding);
+}
+.card-row {  
+    padding: var(--padding-cardrow);
+    width: 100%;
+}
 .card {
-    max-width: 400px;
-    box-shadow: 5px 10px 20px var(--color-accent);
-    padding: 1rem;
-    margin: 0.5rem;
+    flex: 1 1 300px;
+    max-width: 250px;
+    min-width: 260px;
+    box-shadow: 5px 10px 20px var(--color-nav);
+    padding: var(--padding-card);
+    margin: var(--margin-card);
+}
+
+.card a {
+    display: unset;
 }
 
 .card img {
-    max-width: 250px;
-    object-position: center;
-    width: 100%;
+    margin: 0 auto;
+}
+
+.card img{
+    max-width: 250px;;
+    width: 70%;
     height: auto;
     display: block;
+    margin-top: var(--padding-small);
+    margin-bottom: var(--padding-small);
+}
+
+/* Form */
+form {
+    padding: var(--padding);
+    border: 4px solid var(--color-nav);
+}
+
+.form-item {
+    margin: var(--padding-small);
+}
+
+button {
+    background-color: var(--color-contrast);
+    color: var(--color-accent);
+    font-weight: var(--action-weight);
+}
+
+@media screen and (min-width: 500px) {
+    .card-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 320px);
+    }
+
+    nav {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+    }
+    nav ul li {
+        padding: var(--padding-small);
+    }
 }
