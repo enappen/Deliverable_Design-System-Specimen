@@ -177,6 +177,10 @@ nav ul li {
 }
 
 /* Card Row */
+#alt-theme {
+    --color-accent: #df7c7d;
+    --color-dark: #690000;
+}
 .card-section {
     padding: var(--padding);
 }
@@ -190,6 +194,7 @@ nav ul li {
     box-shadow: 5px 10px 15px var(--color-nav);
     padding: var(--padding-card);
     margin: var(--margin-card);
+    background-color: var(--color-accent);
 }
 
 .card a {
@@ -238,6 +243,8 @@ button:hover, input:hover {
     outline: var(--action-outline);
     outline-offset: 0.2rem;
 }
+
+
 
 @media screen and (min-width: 500px) {
     .card-row {
