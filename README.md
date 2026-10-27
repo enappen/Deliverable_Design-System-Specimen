@@ -11,23 +11,22 @@ Fonts:
     Fallback fonts include Arial and sans-serif to maintain the same style. To prevent any additional line wrapping from a fallback font being used, a font size adjust property was assigned 0.507 (the x-height of Lato). 
 
 Foundation and Reset:
-    I chose to reset the global the box sizing property to border-box to have the container of elements include the padding so it is included in the width values provided. When applying a background color and text color for the header, navigation, and footer, I noticed that the background-color was not inherited by the children of the elements. This created a white highlight behind light colored text. To fix this issue I reset the header, navigation, and footer to inherit. This solved caused the background color to become inherited as anticipated. 
+    I chose to reset the global the box sizing property to border-box to have the container of elements include the padding so it is included in the width values provided. 
 
 Token Inventory:
     Design tokens were made to cover font families, text sizing, text color, text weight, padding, margin, and borders. The naming for each item starts with its purpose: 
-    -   font is for the typeface (starting from preferred to fallbacks), 
+    -   font is for the typeface (starting from preferred to fallbacks); 
     -   size is for font size followed by the targets text type (such as body for 
-        body text, h1 for the h1 element and so on), 
+        body text, h1 for the h1 element and so on); 
     -   color is for text color followed by the place it would occur (dark meaning  
-        the darkest color on the page, contrast is the secondary color used on the site to create contrast and break up the page to support the layout, accent is the neutral color that supports and accents the theme, nav is for the navigation background, and indicator is the color of the 
-        visual focus indicator), 
-    -   action weight is for elements that prompt action and apply bold,
+        the darkest color on the page, contrast is the secondary color used on the site to create contrast and break up the page to support the layout, accent is the neutral color that supports and accents the theme, nav is for the navigation background,  indicator is the color of the visual focus indicator), alt dark and alt accent are the different colors for the alt theme that act like the aforementioned named tokens; 
+    -   action weight is for elements that prompt action and apply bold;
     -   action outline is for consistent visual focus indicators throughout the 
-        document (including the form),
+        document (including the form);
     -   padding supplies the padding (with card and card-row named after the    
-        classes they impact and small for small cushions of padding throughout the page to maintain consistent spacing),
-    -   margin for the card is needed to define the card row better,
-    -   and border form for the border of the form. 
+        classes they impact and small for small cushions of padding throughout the page to maintain consistent spacing);
+    -   margin for the card is needed to define the card row better;
+    -   and border if for consistent borders on the elements form, navigation, and card class. 
     These tokens were included because they all effect major layout and color theme elements. Defining them early creates consistency, reduces repetition, and reduces potential for error.
 
 Alternative Theme:
