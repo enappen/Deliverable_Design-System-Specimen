@@ -57,10 +57,17 @@
     --padding-small: 0.75rem;
     --margin-card: 1rem;
     --border-form: 4px solid var(--color-nav);
+    --border-nav: 6px solid var(--color-dark);
 }
 
 /* Dark Mode Theme Switcher */
 .dark-mode {
+    --color-accent: #000000;
+    --color-dark: #faf9f5;    
+    --color-contrast: #6173ad;
+}
+
+#themeSwitchButton {
     background-color: var(--color-dark);
     color: var(--color-accent);
 }
@@ -71,6 +78,11 @@
     font-size-adjust: 0.507;
     margin: 0;
     font-family: var(--font-body);
+}
+
+body {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
 }
 
 /* Links and Visual Focus Indicators */
@@ -140,6 +152,7 @@ footer {
 nav {
   background-color: var(--color-nav);  
   padding: var(--padding-small);
+  border-top: var(--border-nav);
 }
 
 nav a {
@@ -172,10 +185,9 @@ nav ul li {
     width: 100%;
 }
 .card {
-    flex: 1 1 300px;
     max-width: 250px;
     min-width: 260px;
-    box-shadow: 5px 10px 20px var(--color-nav);
+    box-shadow: 5px 10px 15px var(--color-nav);
     padding: var(--padding-card);
     margin: var(--margin-card);
 }
@@ -200,7 +212,11 @@ nav ul li {
 /* Form */
 form {
     padding: var(--padding);
-    border: var(--border-form);
+    border-top: var(--border-form);
+}
+
+fieldset {
+    max-width: 445px;
 }
 
 input:focus-visible, button:focus-visible {
