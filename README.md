@@ -4,6 +4,36 @@ The purpose of this site is to provide resources for new residents of Butte Coun
 
 Website URL:   [public site here]
 
+Fonts:
+    The custom web font Lato is the primary typeface for its readability. Lato is designed by Lukasz Dziedzic and licensed under the Open Font License. 
+    Licensing Information: https://openfontlicense.org/ 
+
+    Fallback fonts include Arial and sans-serif to maintain the same style. To prevent any additional line wrapping from a fallback font being used, a font size adjust property was assigned 0.507 (the x-height of Lato). 
+
+Foundation and Reset:
+    I chose to reset the global the box sizing property to border-box to have the container of elements include the padding so it is included in the width values provided. When applying a background color and text color for the header, navigation, and footer, I noticed that the background-color was not inherited by the children of the elements. This created a white highlight behind light colored text. To fix this issue I reset the header, navigation, and footer to inherit. This solved caused the background color to become inherited as anticipated. 
+
+Token Inventory:
+    Design tokens were made to cover font families, text sizing, text color, text weight, padding, margin, and borders. The naming for each item starts with its purpose: 
+    -   font is for the typeface (starting from preferred to fallbacks), 
+    -   size is for font size followed by the targets text type (such as body for 
+        body text, h1 for the h1 element and so on), 
+    -   color is for text color followed by the place it would occur (dark meaning  
+        the darkest color on the page, contrast is the secondary color used on the site to create contrast and break up the page to support the layout, accent is the neutral color that supports and accents the theme, nav is for the navigation background, and indicator is the color of the 
+        visual focus indicator), 
+    -   action weight is for elements that prompt action and apply bold,
+    -   action outline is for consistent visual focus indicators throughout the 
+        document (including the form),
+    -   padding supplies the padding (with card and card-row named after the    
+        classes they impact and small for small cushions of padding throughout the page to maintain consistent spacing),
+    -   margin for the card is needed to define the card row better,
+    -   and border form for the border of the form. 
+    These tokens were included because they all effect major layout and color theme elements. Defining them early creates consistency, reduces repetition, and reduces potential for error.
+
+Accessibility and Contrast Decisions:
+    Alt text was provided for each photo describing the image and context for screen readers or if the image does not load. The site is navigable by keyboard including the form at the bottom. Visual focus indicators were included with a high contrasting color in both value and hue. Settings were updated for the form to have a consistent indicator throughout the entire page. The maintain this consistency, I added a property to the hover selector so that the hovering over links and inputs would have the same effect as the visual focus indicator when navigating by keyboard. A small offset for the outline was included to make reading the text easier when outlined. External links remain underlined to indicate to the user that the text contains a link. The site maintains a mobile-first design style to accommodate small and large screens without overflow. Navy blue was used to mark the background of the header and footer to make identifying website components easier with a high contrasting color to the soft white background. Additionally, navy blue is commonly associated with security and safety--a feeling most people seek when moving to a new area. Soft white was used to reduce some of the blue light emitted and eye fatigue that comes from looking at a true white. 
+
+
 Testing Evidence:
 [testing evidence]
 
