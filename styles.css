@@ -205,10 +205,6 @@ nav ul li {
     border: var(--border-card);
 }
 
-.card a {
-    display: unset;
-}
-
 .card img {
     margin: 0 auto;
 }

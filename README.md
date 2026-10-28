@@ -11,7 +11,7 @@ Fonts:
     Fallback fonts include Arial and sans-serif to maintain the same style. To prevent any additional line wrapping from a fallback font being used, a font size adjust property was assigned 0.507 (the x-height of Lato). 
 
 Foundation and Reset:
-    I chose to reset the global the box sizing property to border-box to have the container of elements include the padding so it is included in the width values provided. 
+    I chose to reset the global the box sizing property to border-box to have the container of elements include the padding so it is included in the width values provided. To keep links on theme, I set color to inherit for anchored links and hovering. The title was redundant of heading 1 and unnecessary to be displayed, so display was reset to none. To keep navigation on theme after being linked to section ID's, background and text color was set to inherit and the list-style was set to none to remove the bullet points.
 
 Token Inventory:
     Design tokens were made to cover font families, text sizing, text color, text weight, padding, margin, and borders. The naming for each item starts with its purpose: 
