@@ -36,10 +36,8 @@ Accessibility and Contrast Decisions:
     Alt text was provided for each photo describing the image and context for screen readers or if the image does not load. The site is navigable by keyboard including the form at the bottom. Visual focus indicators were included with a high contrasting color in both value and hue. Settings were updated for the form to have a consistent indicator throughout the entire page. The maintain this consistency, I added a property to the hover selector so that the hovering over links and inputs would have the same effect as the visual focus indicator when navigating by keyboard. A small offset for the outline was included to make reading the text easier when outlined. External links remain underlined to indicate to the user that the text contains a link. The site maintains a mobile-first design style to accommodate small and large screens without overflow. Navy blue was used to mark the background of the header and footer to make identifying website components easier with a high contrasting color to the soft white background. Additionally, navy blue is commonly associated with security and safety--a feeling most people seek when moving to a new area. Soft white was used to reduce some of the blue light emitted and eye fatigue that comes from looking at a true white. 
 
 Testing Evidence:
-[testing evidence]
-
-Code Defense:
-[code defense]
+    Testing evidence is located here: /Test-Record/Test-Record.doc
+    In the test record there are screenshots of each test accompanied by a detailed explanation of the condition, what was expected, the observed result, and 3 revisions made because of the testing.
 
 AI Disclosure:
 No generative AI was used.
